@@ -66,3 +66,23 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+/* Custom Bootstrap Overrides */
+.btn-primary,
+.text-primary,
+.bg-primary {
+  background-color: #000 !important;
+  color: #fff !important;
+  /* Ensure text is visible on a black background */
+  border-color: #000 !important;
+}
+
+a.text-primary {
+  color: #000 !important;
+}
+
+a.text-primary:hover,
+a.text-primary:focus {
+  color: #555 !important;
+  /* Slightly lighter shade for hover/focus state */
+}
