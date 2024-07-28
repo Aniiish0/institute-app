@@ -1,6 +1,10 @@
 import React from 'react';
-import { Form, Button } from 'react-bootstrap';
+import { Form } from 'react-bootstrap';
 import { useForm } from './hooks';
+import TextArea from '../TextArea';
+import TextInput from '../TextInput';
+import Checkbox from '../CheckBox';
+import Button from '../Button';
 
 type FieldType = 'text' | 'email' | 'textarea' | 'checkbox' | 'phone' | 'password';
 
@@ -9,6 +13,7 @@ export interface FieldConfig {
   name: string;
   type: FieldType;
   placeholder?: string;
+  required?: boolean;
 }
 
 interface GenericFormProps<T extends object> {
@@ -26,45 +31,40 @@ const GenericForm = <T extends object>({ initialValues, fields, onSubmit }: Gene
   };
 
   return (
-    <Form onSubmit={handleSubmit}>
+    <Form onSubmit={handleSubmit} className='text-start'>
       {fields.map((field) => (
-        <Form.Group key={field.name} controlId={`form${field.name}`}>
+        <div key={field.label} className='pb-3 rounded-0'>
           {field.type === 'textarea' ? (
-            <>
-              <Form.Label>{field.label}</Form.Label>
-              <Form.Control
-                as="textarea"
-                name={field.name}
-                value={(formState as never)[field.name]}
-                onChange={handleChange}
-                placeholder={field.placeholder}
-              />
-            </>
+            <TextArea
+              label={field.label}
+              name={field.name}
+              value={(formState as never)[field.name]}
+              onChange={handleChange}
+              placeholder={field.placeholder}
+              required={field.required}
+            />
           ) : field.type === 'checkbox' ? (
-            <Form.Check
-              type="checkbox"
+            <Checkbox
               name={field.name}
               checked={(formState as never)[field.name]}
               onChange={handleChange}
               label={field.label}
+              required={field.required}
             />
           ) : (
-            <>
-              <Form.Label>{field.label}</Form.Label>
-              <Form.Control
-                type={field.type}
-                name={field.name}
-                value={(formState as never)[field.name]}
-                onChange={handleChange}
-                placeholder={field.placeholder}
-              />
-            </>
+            <TextInput
+              label={field.label}
+              type={field.type}
+              name={field.name}
+              value={(formState as never)[field.name]}
+              onChange={handleChange}
+              placeholder={field.placeholder}
+              required={field.required}
+            />
           )}
-        </Form.Group>
+        </div>
       ))}
-      <Button variant="primary" type="submit">
-        Submit
-      </Button>
+      <Button label='Submit'/>
     </Form>
   );
 };

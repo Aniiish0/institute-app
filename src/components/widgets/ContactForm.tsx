@@ -18,10 +18,11 @@ const ContactForm: React.FC = () => {
   };
 
   const fields: FieldConfig[] = [
-    { label: 'Name', name: 'name', type: 'text', placeholder: 'Enter your name' },
+    { label: 'Name', name: 'name', type: 'text', placeholder: 'Enter your name', required: true },
+    { label: 'Phone', name: 'phone', type: 'phone', placeholder: 'Enter your phone number', required: true },
     { label: 'Email', name: 'email', type: 'email', placeholder: 'Enter your email' },
-    { label: 'Message', name: 'message', type: 'textarea', placeholder: 'Type your message' },
-    { label: 'I accept the Terms', name: 'acceptTerms', type: 'checkbox' },
+    { label: 'Message', name: 'message', type: 'textarea', placeholder: 'Type your message', required: true },
+    { label: 'I accept the terms', name: 'accept-terms', type: 'checkbox', required: true },
   ];
 
   const handleSubmit = (values: ContactFormState) => {
@@ -32,7 +33,7 @@ const ContactForm: React.FC = () => {
   return (
     <Container>
       <h1>Contact us</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Wekf qbekbd adhfikbbbd</p>
       <Form
         initialValues={initialValues}
         fields={fields}
