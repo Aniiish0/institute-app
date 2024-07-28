@@ -5,4 +5,5 @@ echo 'Running pre-commit scripts'
 npm run lint
 npm run build
 git add .
+git config commit.template .commit.template
 # npm test
