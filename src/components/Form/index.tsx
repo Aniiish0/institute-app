@@ -6,7 +6,7 @@ import TextInput from '../TextInput';
 import Checkbox from '../CheckBox';
 import Button from '../Button';
 
-type FieldType = 'text' | 'email' | 'textarea' | 'checkbox' | 'phone' | 'password';
+type FieldType = 'text' | 'email' | 'textarea' | 'checkbox' | 'tel' | 'password';
 
 export interface FieldConfig {
   label: string;

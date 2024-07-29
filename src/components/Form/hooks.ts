@@ -1,4 +1,3 @@
-// hooks/useForm.ts
 import { useState } from 'react';
 import { handleInputChange } from './helper';
 
