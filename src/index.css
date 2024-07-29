@@ -6,11 +6,6 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -85,4 +80,8 @@ a.text-primary:hover,
 a.text-primary:focus {
   color: #555 !important;
   /* Slightly lighter shade for hover/focus state */
+}
+input[type=checkbox] {
+  border: 2px solid #000 !important;
+  border-radius: 0px !important;
 }
