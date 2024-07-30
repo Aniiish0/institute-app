@@ -1,13 +1,6 @@
 import React from 'react';
 import { Form } from 'react-bootstrap';
-
-interface CheckboxProps {
-  label: string;
-  name: string;
-  checked: boolean;
-  onChange: React.ChangeEventHandler<HTMLInputElement>;
-  required?: boolean; // Add required prop to make checkbox required by default. Default value is false.
-}
+import { CheckboxProps } from './types';
 
 const Checkbox: React.FC<CheckboxProps> = ({ label, name, onChange, checked = false, required = false }) => (
   <Form.Group controlId={`form${name}`}>
