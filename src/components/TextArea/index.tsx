@@ -1,17 +1,8 @@
 import React from 'react';
 import { Form } from 'react-bootstrap';
+import { TextAreaProps } from './types';
 
-interface TextAreaProps {
-  label: string;
-  name: string;
-  value: string;
-  onChange: React.ChangeEventHandler<HTMLTextAreaElement>;
-  placeholder?: string;
-  rows?: number;
-  required?: boolean; // Add required prop to make textarea required by default. Default value is false.
-}
-
-const TextArea: React.FC<TextAreaProps> = ({ label, name, value, onChange, placeholder, required = false, rows = 5 }) => (
+const TextArea: React.FC<TextAreaProps> = ({ label, name, value, onChange, placeholder, required = false, rows = 5, validator, validationError }) => (
   <Form.Group controlId={`form${name}`}>
     <Form.Label>{label}{required && <span>*</span>}</Form.Label>
     <Form.Control
@@ -23,7 +14,11 @@ const TextArea: React.FC<TextAreaProps> = ({ label, name, value, onChange, place
       rows={rows}
       required={required}
       className='form-control-lg rounded-0 border-black border-2'
+        isInvalid={validator ? !validator(value) : false}
     />
+    <Form.Control.Feedback type="invalid">
+        {validationError || "Invalid input"}
+    </Form.Control.Feedback>
   </Form.Group>
 );
 
