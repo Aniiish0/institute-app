@@ -1,10 +1,6 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
-
-interface SubmitButtonProps {
-  label?: string;
-  type?: 'submit' | 'button' | 'reset'; // Default value is 'submit'. Add type prop to change button type.
-}
+import { SubmitButtonProps } from './types';
 
 const SubmitButton: React.FC<SubmitButtonProps> = ({ label = "Submit", type = "submit" }) => (
   <Button variant="primary" type={type} className='btn-lg rounded-0'>
