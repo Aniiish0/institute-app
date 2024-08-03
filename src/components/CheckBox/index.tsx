@@ -11,7 +11,6 @@ const Checkbox: React.FC<CheckboxProps> = ({ label, name, onChange, checked = fa
       onChange={onChange}
       label={label + (required ? '*': '')}
       required={required}
-      className='border-black border-2'
     />
   </Form.Group>
 );
