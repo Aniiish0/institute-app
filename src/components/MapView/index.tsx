@@ -2,6 +2,7 @@ import { MAP_API_KEY } from "../../constants";
 import { MapViewProps } from "./types";
 
 const MapView= ({ searchText }: MapViewProps) => {
+  const sanitizedSearchText = encodeURIComponent(searchText);
   return (
     <div className="card rounded-0" style={{height: "100%"}}>
         <iframe
@@ -13,7 +14,7 @@ const MapView= ({ searchText }: MapViewProps) => {
             referrerPolicy="no-referrer-when-downgrade"
             src={
               `https://www.google.com/maps/embed/v1/place?key=${MAP_API_KEY}
-              &q=${searchText.replace(' ', '+')}`
+              &q=${sanitizedSearchText}`
             }>
         </iframe>
     </div>

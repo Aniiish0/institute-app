@@ -1,4 +1,5 @@
 import { Button } from 'react-bootstrap';
+import { getBrochureUrl } from './helpers';
 
 const HomeNavbar = () => {
   return (
@@ -57,13 +58,14 @@ const HomeNavbar = () => {
           </li>
         </ul>
       </div>
-      <Button variant="primary" >
+      <a href={getBrochureUrl()}>
+      <Button variant="primary" className='rounded-0'>
           <i className="bi bi-download"/>
           <span style={{paddingLeft:"10px"}}>Brochure</span>
       </Button>
+      </a>
       </div>
     </nav>
-    
   );
 };
 export default HomeNavbar;
