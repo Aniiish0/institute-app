@@ -14,7 +14,7 @@ Add environment variables to process if in production environment or to `.env` f
 VITE_MAP_API_KEY=<YOUR_API_KEY_FOR_GOOGLE_MAPS_EMBED_API>
 ```
 
-**_Note_**: _To generate an API key for google maps embed API, use this link: https://console.cloud.google.com/google/maps-apis/credentials._
+**_Note_**: _To generate an API key for Google Maps embed API, use this [link](https://console.cloud.google.com/google/maps-apis/credentials)._
 
 ## Run the app
 
