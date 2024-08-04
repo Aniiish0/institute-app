@@ -1,7 +1,6 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import CollapseCard from '../CollapseCard';
-import Button from '../Button';
 
 const faq: React.FC = () => {
   const faqData = [
@@ -20,7 +19,6 @@ const faq: React.FC = () => {
     <Container>
       <h1>FAQs</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
-      <Button label='Contact' type='button' variant='secondary'/>
       <div className='my-4'>
         <Row xs={1} sm={1} md={1} lg={2} className="g-2">
           {faqData.map((faq, index) => (
