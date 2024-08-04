@@ -36,7 +36,7 @@ const ContactForm: React.FC = () => {
 
   return (
     <Container>
-      <h1>Contact us</h1>
+      <h1 className='custom-h1'>Contact us</h1>
       <Row xs={1} sm={1} md={1} lg={2} className="g-4">
         <Col>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Wekf qbekbd adhfikbbbd</p>
