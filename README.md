@@ -1,13 +1,35 @@
 # How to setup
 
-Run the below command in terminal:
+## Run the below command in terminal
+
 ```sh
 npm run setup
 ```
 
-To run the app, run the below command:
+## Add environment variables
+
+Add environment variables to process if in production environment or to `.env` file (check `.env.example` file) in local or development setup
+
+```sh
+VITE_MAP_API_KEY=<YOUR_API_KEY_FOR_GOOGLE_MAPS_EMBED_API>
+```
+
+**_Note_**: _To generate an API key for google maps embed API, use this link: https://console.cloud.google.com/google/maps-apis/credentials._
+
+## Run the app
+
+To run the app, run one of the below commands
+
+_For development environment:_
+
 ```sh
 npm run dev
+```
+
+_For production environment:_
+
+```sh
+npm run preview
 ```
 
 # React + TypeScript + Vite
@@ -29,12 +51,12 @@ If you are developing a production application, we recommend updating the config
 export default {
   // other rules...
   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
+    ecmaVersion: "latest",
+    sourceType: "module",
+    project: ["./tsconfig.json", "./tsconfig.node.json", "./tsconfig.app.json"],
     tsconfigRootDir: __dirname,
   },
-}
+};
 ```
 
 - Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`

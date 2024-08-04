@@ -1,7 +1,8 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 import Form from '../Form';
 import { FieldConfig } from '../Form/types';
+import MapView from '../MapView';
 
 interface ContactFormState {
   name: string;
@@ -25,7 +26,7 @@ const ContactForm: React.FC = () => {
     { label: 'Phone', name: 'phone', type: 'tel', placeholder: 'Enter your phone number', required: true, validationError: "Invalid phone number" },
     { label: 'Email', name: 'email', type: 'email', placeholder: 'Enter your email', validationError: "Invalid email address" },
     { label: 'Message', name: 'message', type: 'textarea', placeholder: 'Type your message', required: true, validateRegExp: /^.{5,}$/, validationError: "Need to be atleast 5 characters long" },
-    { label: 'I accept the terms', name: 'acceptTerms', type: 'checkbox', required: true },
+    { label: 'Contact me', name: 'acceptTerms', type: 'checkbox' },
   ];
 
   const handleSubmit = (values: ContactFormState) => {
@@ -36,12 +37,19 @@ const ContactForm: React.FC = () => {
   return (
     <Container>
       <h1>Contact us</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Wekf qbekbd adhfikbbbd</p>
-      <Form
-        initialValues={initialValues}
-        fields={fields}
-        onSubmit={handleSubmit}
-      />
+      <Row xs={1} sm={1} md={1} lg={2} className="g-4">
+        <Col>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Wekf qbekbd adhfikbbbd</p>
+          <Form
+            initialValues={initialValues}
+            fields={fields}
+            onSubmit={handleSubmit}
+          />
+        </Col>
+        <Col>
+          <MapView searchText='KV Bargarh, Odisha' />
+        </Col>
+      </Row>
     </Container>
   );
 };
