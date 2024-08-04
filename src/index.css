@@ -2,6 +2,7 @@
   font-family: 'Helvetica Neue', Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  --brand:#0644a7;
 }
 
 /* Custom Bootstrap Overrides */
@@ -9,7 +10,7 @@
 .text-primary,
 .bg-primary,
 .btn-outline-primary:hover {
-  background-color: #000 !important;
+  background-color: var(--brand) !important;
   color: #fff !important;
   /* Ensure text is visible on a black background */
   border-color: #000 !important;
@@ -28,7 +29,7 @@
 }
 
 a.text-primary {
-  color: #000 !important;
+  color:var(--brand) !important;
 }
 
 a.text-primary:hover,
@@ -44,7 +45,7 @@ input[type=checkbox] {
 .custom-link-btn {
   background: none;
   border: none;
-  color: black;
+  color: var(--brand);
   padding: 0;
   display: inline-flex;
   align-items: center;
@@ -55,7 +56,7 @@ input[type=checkbox] {
 
 .custom-link-btn:hover {
   text-decoration: underline;
-  color: black;
+  color: var(--brand);
 }
 
 .custom-link-btn svg {
@@ -65,4 +66,8 @@ input[type=checkbox] {
 
 .custom-link-btn:hover svg {
   transform: translateX(4px);
+}
+
+.custom-h1{
+  color: var(--brand);
 }
