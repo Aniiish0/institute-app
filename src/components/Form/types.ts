@@ -1,6 +1,12 @@
 export type ValidatorType = (value: string) => boolean;
 
-export type FieldType = 'text' | 'email' | 'textarea' | 'checkbox' | 'tel' | 'password';
+export type FieldType =
+  | "text"
+  | "email"
+  | "textarea"
+  | "checkbox"
+  | "tel"
+  | "password";
 
 export interface FieldConfig {
   label: string;

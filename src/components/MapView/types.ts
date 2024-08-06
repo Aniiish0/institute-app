@@ -1,3 +1,3 @@
 export interface MapViewProps {
-    searchText: string; // Search text for the map.
+  searchText: string; // Search text for the map.
 }
