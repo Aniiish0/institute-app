@@ -5,9 +5,13 @@ const HomePage = () => {
   return (
     <Container className="container-fluid">
       <div>
-        <h1>Welcome to XY Branch,where</h1>
-        <h1>children learn,grow, and</h1>
-        <h1>thrive.</h1>
+        <h1 className="custom-h1">
+          Welcome to XY Branch,
+          <br />
+          where children learn,
+          <br />
+          grow, and thrive.
+        </h1>
       </div>
       <br />
       <div>

@@ -20,6 +20,7 @@ const faq: React.FC = () => {
   return (
     <Container>
       <h1 className="custom-h1">FAQs</h1>
+      <br />
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
         varius enim in eros elementum tristique.
