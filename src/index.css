@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   font-family: "Helvetica Neue", Arial, sans-serif;
   line-height: 1.5;
@@ -52,11 +56,14 @@ input[type="checkbox"] {
   text-decoration: none;
   font-size: 16px;
   font-weight: 400;
+  border: none !important;
 }
 
 .custom-link-btn:hover {
   text-decoration: underline;
   color: var(--brand) !important;
+  border: none !important;
+  text-decoration-line: none;
 }
 
 .custom-link-btn svg {
@@ -69,5 +76,13 @@ input[type="checkbox"] {
 }
 
 .custom-h1 {
+  color: var(--brand);
+}
+
+section {
+  padding: 20px 0;
+}
+
+.nav-item.active > a {
   color: var(--brand);
 }
