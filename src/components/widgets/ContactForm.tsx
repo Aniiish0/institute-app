@@ -69,10 +69,7 @@ const ContactForm: React.FC = () => {
       <br />
       <Row xs={1} sm={1} md={1} lg={2} className="g-4">
         <Col>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Wekf qbekbd
-            adhfikbbbd
-          </p>
+          <p>Please fill free to reach out to us regarding any queries.</p>
           <Form
             initialValues={initialValues}
             fields={fields}

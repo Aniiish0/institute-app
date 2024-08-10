@@ -15,11 +15,8 @@ const HomePage = () => {
       </div>
       <br />
       <div>
-        <h6 style={{ fontWeight: "normal" }}>
-          We provide a healthy and friendly environment for primary school
-          children to learn, study, and
-        </h6>
-        <h6 style={{ fontWeight: "normal" }}>develop essential skills.</h6>
+        We provide a healthy and friendly environment for primary school
+        children to learn, study, and develop essential skills.
       </div>
       <br></br>
       <Slider />

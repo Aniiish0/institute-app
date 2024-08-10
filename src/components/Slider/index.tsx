@@ -1,3 +1,5 @@
+import "./slider.css";
+
 const Slider = () => {
   return (
     <div
@@ -8,21 +10,21 @@ const Slider = () => {
       <div className="carousel-inner">
         <div className="carousel-item active">
           <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgMLDpZg5GicD82-Q3uJkKD8R6XpQNvz3yYw&s"
+            src="https://media.istockphoto.com/id/2149774102/photo/smiling-black-schoolboy-writing-on-a-class-at-elementary-school.webp?b=1&s=170667a&w=0&k=20&c=BR9RTWiSEYLAcFVEEkMDBXjYs12eS8FSRMTG0oNdVHE="
             className="d-block w-100"
             alt="..."
           />
         </div>
         <div className="carousel-item">
           <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRxfkP8_xJpThNjMdME13fCySo7AtUpWtFodZOrndy607htYTBv3Otwhm0uw&s"
+            src="https://media.istockphoto.com/id/1401178460/photo/teacher-helping-a-young-student-with-her-homework-in-the-library-after-school-two-females-are.webp?b=1&s=170667a&w=0&k=20&c=aPY2PqE2XJtiRo-9WSdDR0DHTy3PgocUK0GVTwoYmcg="
             className="d-block w-100"
             alt="..."
           />
         </div>
         <div className="carousel-item">
           <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKLzugjHcLP-wXf3Cc7anbhQRvR8MIG1IgErc63WxBbc__G-sNcRkXl3noMQ&s"
+            src="https://media.istockphoto.com/id/1409722748/photo/students-raising-hands-while-teacher-asking-them-questions-in-classroom.webp?b=1&s=170667a&w=0&k=20&c=wmjzzESyHcSDFXYI1qzngse-EIj7aBMfebEaqjT8cjM="
             className="d-block w-100"
             alt="..."
           />
