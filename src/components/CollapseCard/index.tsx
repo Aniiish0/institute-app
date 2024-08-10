@@ -13,7 +13,7 @@ const CollapseCard: React.FC<CollapseCardProps> = ({ title, body }) => {
     <Card className="border-2 border-black rounded-0">
       <Card.Body className="bg-white">
         <Card.Title className="d-flex justify-content-between align-items-center ">
-          <strong className="custom-h1">{title}</strong>
+          <strong>{title}</strong>
           <Button
             onClick={toggleOpen}
             aria-expanded={isOpen}
