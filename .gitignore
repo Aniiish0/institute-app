@@ -23,10 +23,3 @@ dist-ssr
 *.sln
 *.sw?
 .idx
-
-# Environment variables
-.env
-.env.local*
-.env.dev*
-.env.test*
-.env.prod*
