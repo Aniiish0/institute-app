@@ -6,7 +6,7 @@ const HomePage = () => {
     <Container className="container-fluid">
       <div>
         <h1 className="custom-h1">
-          Welcome to XY Branch,
+          Welcome to XYZ Branch,
           <br />
           where children learn,
           <br />
