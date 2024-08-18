@@ -21,7 +21,7 @@ const faq: React.FC = () => {
     <Container>
       <h1 className="custom-h1">FAQs</h1>
       <br />
-      <p>Important Queries regarding the XY Branch</p>
+      <p>Important Queries regarding the XYZ Branch</p>
       <div className="my-4">
         <Row xs={1} sm={1} md={1} lg={2} className="g-2">
           {faqData.map((faq, index) => (

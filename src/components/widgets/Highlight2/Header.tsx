@@ -12,7 +12,7 @@ const Header: React.FC = () => {
       </h1>
       <br />
       <p>
-        At XY Branch, we believe in providing primary school children with a
+        At XYZ Branch, we believe in providing primary school children with a
         healthy and friendly environment where they can learn, study, and
         develop essential skills. Our activity-driven methodology ensures an
         engaging and effective learning experience.
