@@ -7,8 +7,16 @@ import Highlight2 from "./components/widgets/Highlight2";
 import { type NavbarItem, NavbarProps } from "./components/Navbar/types";
 
 import { getBrochureUrl } from "./helpers/utility";
+import { BOT_ID } from "./constants";
+import useScript from "./hooks/useScript";
 
 function App() {
+  useScript("https://cdn.botpress.cloud/webchat/v2.1/inject.js", false);
+  useScript(
+    `https://mediafiles.botpress.cloud/${BOT_ID}/webchat/v2.1/config.js`,
+    false,
+  );
+
   const navbarItems: NavbarItem[] = [
     { label: "Home", redirectionUrl: "#home", sectionId: "home" },
     {

@@ -12,9 +12,13 @@ Add environment variables to process if in production environment or to `.env` f
 
 ```sh
 VITE_MAP_API_KEY=<YOUR_API_KEY_FOR_GOOGLE_MAPS_EMBED_API>
+VITE_BOTPRESS_BOT_ID=<YOUR_BOTPRESS_BOT_ID_FOR_CHATBOT>
 ```
 
-**_Note_**: _To generate an API key for Google Maps embed API, use this [link](https://console.cloud.google.com/google/maps-apis/credentials)._
+**_Note_**:
+
+- _To generate an API key for Google Maps embed API, use this [link](https://console.cloud.google.com/google/maps-apis/credentials)._
+- _To use a Botpress bot ID, go to [Botpress page](https://botpress.com/)._
 
 ## Run the app
 
