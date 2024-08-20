@@ -489,6 +489,18 @@
   resolved "https://registry.npmjs.org/@popperjs/core/-/core-2.11.8.tgz"
   integrity sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==
 
+"@proto-xyz/ui-components@^0.0.3":
+  version "0.0.3"
+  resolved "https://registry.npmjs.org/@proto-xyz/ui-components/-/ui-components-0.0.3.tgz"
+  integrity sha512-8j19elxlumcDWkO5b634gDA5T7TlFd6Ts5gud/46tcVMTeolEFO4poHSTvq5nwpaX8BiOnhwZkhqcWXyWMXc+g==
+  dependencies:
+    bootstrap "^5.3.0"
+    bootstrap-icons "^1.11.3"
+    react "^18.3.1"
+    react-bootstrap "^2.10.4"
+    react-dom "^18.3.1"
+    react-responsive-carousel "^3.2.23"
+
 "@react-aria/ssr@^3.5.0":
   version "3.9.5"
   resolved "https://registry.npmjs.org/@react-aria/ssr/-/ssr-3.9.5.tgz"
