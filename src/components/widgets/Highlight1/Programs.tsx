@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "@proto-xyz/ui-components";
+import Button from "../../Button";
 
 const Programs: React.FC = () => {
   return (

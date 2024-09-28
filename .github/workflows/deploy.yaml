@@ -1,11 +1,9 @@
-name: Build, Release & Deploy
+name: Deploy
 
 on:
   push:
     branches:
-      - main
-    paths-ignore:
-      - "chore(release):*"
+      - master
 
 jobs:
   build:
@@ -19,34 +17,10 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: "18"
+          node-version: "16"
 
       - name: Install dependencies
         run: npm ci
-
-      - name: Build project
-        env:
-          VITE_MAP_API_KEY: ${{ secrets.MAP_API_KEY }}
-        run: npm run build
-
-  release:
-    name: Release
-    needs: build
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Set Git user
-        run: |
-          git config user.email "subratpatnaik.email@gmail.com"
-          git config user.name "Subrat Kumar Pattanaik"
-
-      - name: Create release
-        run: npm run release
-
-      - name: Push changes and tags
-        run: git push --follow-tags origin main
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build project
         env:
@@ -61,9 +35,9 @@ jobs:
 
   deploy:
     name: Deploy
-    needs: release
+    needs: build
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/master'
 
     steps:
       - name: Download artifact
