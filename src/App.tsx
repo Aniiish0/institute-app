@@ -32,7 +32,7 @@ function App() {
 
   const navbarProps: NavbarProps = {
     logo: "xyz.jpeg",
-    logoRedirectionUrl: "/",
+    logoRedirectionUrl: "/institute-app",
     items: navbarItems,
     cornerButton: {
       label: "Brochure",
