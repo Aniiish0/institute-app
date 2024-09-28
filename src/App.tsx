@@ -1,10 +1,13 @@
-import ContactForm from "./components/widgets/ContactForm";
-import FAQ from "./components/widgets/FAQs";
+import ContactForm from "./components/ContactForm";
+import FAQ from "./components/FAQs";
 import HomePage from "./components/HomePage";
-import HomeNavbar from "./components/Navbar";
-import Highlight1 from "./components/widgets/Highlight1";
-import Highlight2 from "./components/widgets/Highlight2";
-import { type NavbarItem, NavbarProps } from "./components/Navbar/types";
+import {
+  Navbar,
+  type NavbarItem,
+  type NavbarProps,
+} from "@proto-xyz/ui-components";
+import Highlight1 from "./components/Highlight1";
+import Highlight2 from "./components/Highlight2";
 
 import { getBrochureUrl } from "./helpers/utility";
 
@@ -39,7 +42,7 @@ function App() {
   };
   return (
     <div>
-      <HomeNavbar {...navbarProps} />
+      <Navbar {...navbarProps} />
       <div className="container-fluid">
         <section id="home">
           <HomePage />

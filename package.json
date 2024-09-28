@@ -13,6 +13,7 @@
     "setup": "npm i && npx husky install && node setup.js"
   },
   "dependencies": {
+    "@proto-xyz/ui-components": "^0.0.3",
     "bootstrap": "^5.3.0",
     "bootstrap-icons": "^1.11.3",
     "react": "^18.3.1",
