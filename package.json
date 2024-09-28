@@ -9,7 +9,7 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0 && prettier --check .",
     "format": "prettier --write .",
     "preview": "vite preview",
-    "setup": "npm i && npx husky install"
+    "setup": "npm i && npx husky install && node setup.js"
   },
   "dependencies": {
     "bootstrap": "^5.3.0",
