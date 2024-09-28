@@ -6,34 +6,9 @@ on:
       - master
 
 jobs:
-  check-commit-message:
-    name: Check Commit Message
-    runs-on: ubuntu-latest
-    outputs:
-      should_run: ${{ steps.check_commit.outputs.should_run }}
-
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
-
-      - name: Get commit message
-        id: commit_message
-        run: echo "::set-output name=message::$(git log -1 --pretty=%B)"
-
-      - name: Determine if workflow should run
-        id: check_commit
-        run: |
-          if [[ "${{ steps.commit_message.outputs.message }}" == *"chore(release):"* ]]; then
-            echo "::set-output name=should_run::false"
-          else
-            echo "::set-output name=should_run::true"
-          fi
-
   build:
     name: Build
     runs-on: ubuntu-latest
-    needs: check-commit-message
-    if: needs.check-commit-message.outputs.should_run == 'true'
 
     steps:
       - name: Checkout repo
@@ -52,34 +27,6 @@ jobs:
           VITE_MAP_API_KEY: ${{ secrets.MAP_API_KEY }}
         run: npm run build
 
-  release:
-    name: Release
-    needs: [build, check-commit-message]
-    runs-on: ubuntu-latest
-    if: needs.check-commit-message.outputs.should_run == 'true'
-
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
-
-      - name: Set Git user
-        run: |
-          git config user.email "github-actions@github.com"
-          git config user.name "GitHub Action Bot"
-
-      - name: Create release
-        run: npm run release
-
-      - name: Push changes and tags
-        run: git push --follow-tags origin main
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Build project
-        env:
-          VITE_MAP_API_KEY: ${{ secrets.MAP_API_KEY }}
-        run: npm run build
-
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v3
         with:
@@ -88,9 +35,9 @@ jobs:
 
   deploy:
     name: Deploy
-    needs: [release, check-commit-message]
+    needs: build
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main' && needs.check-commit-message.outputs.should_run == 'true'
+    if: github.ref == 'refs/heads/master'
 
     steps:
       - name: Download artifact
