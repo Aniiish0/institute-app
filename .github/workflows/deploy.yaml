@@ -1,13 +1,15 @@
-name: Build, Upload & Deploy
+name: Build, Release & Deploy
 
 on:
   push:
     branches:
       - main
+    paths-ignore:
+      - "chore(release):*"
 
 jobs:
-  upload-build:
-    name: Build & Upload
+  build:
+    name: Build
     runs-on: ubuntu-latest
 
     steps:
@@ -27,6 +29,30 @@ jobs:
           VITE_MAP_API_KEY: ${{ secrets.MAP_API_KEY }}
         run: npm run build
 
+  release:
+    name: Release
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set Git user
+        run: |
+          git config user.email "subratpatnaik.email@gmail.com"
+          git config user.name "Subrat Kumar Pattanaik"
+
+      - name: Create release
+        run: npm run release
+
+      - name: Push changes and tags
+        run: git push --follow-tags origin main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build project
+        env:
+          VITE_MAP_API_KEY: ${{ secrets.MAP_API_KEY }}
+        run: npm run build
+
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v3
         with:
@@ -35,7 +61,7 @@ jobs:
 
   deploy:
     name: Deploy
-    needs: upload-build
+    needs: release
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
 

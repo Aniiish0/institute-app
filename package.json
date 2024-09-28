@@ -9,6 +9,7 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0 && prettier --check .",
     "format": "prettier --write .",
     "preview": "vite preview",
+    "release": "standard-version",
     "setup": "npm i && npx husky install && node setup.js"
   },
   "dependencies": {
@@ -32,6 +33,7 @@
     "eslint-plugin-react-refresh": "^0.4.7",
     "husky": "^8.0.3",
     "prettier": "^3.3.3",
+    "standard-version": "^9.5.0",
     "typescript": "^5.2.2",
     "vite": "^5.3.4"
   }
