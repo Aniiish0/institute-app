@@ -1,6 +1,6 @@
-import { Slider } from "@proto-xyz/ui-components";
+import Slider from "../Slider";
+import "./HomePage.css";
 import { Container } from "react-bootstrap";
-
 const HomePage = () => {
   const images = [
     "https://plus.unsplash.com/premium_photo-1663106423058-c5242333348c?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2Nob29sJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",
