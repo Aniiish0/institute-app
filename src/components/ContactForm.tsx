@@ -1,8 +1,7 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import Form from "../Form";
-import { FieldConfig } from "../Form/types";
-import MapView from "../MapView";
+import { Form, type FieldConfig, MapView } from "@proto-xyz/ui-components";
+import { MAP_API_KEY } from "../constants";
 
 interface ContactFormState {
   name: string;
@@ -77,7 +76,7 @@ const ContactForm: React.FC = () => {
           />
         </Col>
         <Col>
-          <MapView searchText="KV Bargarh, Odisha" />
+          <MapView searchText="KV Bargarh, Odisha" apiKey={MAP_API_KEY} />
         </Col>
       </Row>
     </Container>
