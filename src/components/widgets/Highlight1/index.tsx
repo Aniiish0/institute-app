@@ -9,10 +9,7 @@ const Highlight1: React.FC = () => {
     <Container className="container-fluid mt-5">
       <div className="row">
         <div className="col-lg-5 justify-content-center">
-          <img
-            className="img-fluid"
-            src="https://png.pngtree.com/png-vector/20191121/ourmid/pngtree-blue-bird-vector-or-color-illustration-png-image_2013004.jpg"
-          />
+          <img src="https://png.pngtree.com/png-vector/20191121/ourmid/pngtree-blue-bird-vector-or-color-illustration-png-image_2013004.jpg" />
         </div>
         <div className="col-lg-7">
           <Header />
