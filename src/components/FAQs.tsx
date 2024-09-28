@@ -1,6 +1,6 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import CollapseCard from "../CollapseCard";
+import { CollapseCard } from "@proto-xyz/ui-components";
 
 const faq: React.FC = () => {
   const faqData = [
