@@ -2,6 +2,7 @@ import ContactForm from "./components/ContactForm";
 import FAQ from "./components/FAQs";
 import HomePage from "./components/HomePage";
 import {
+  ChatbotButton,
   Navbar,
   type NavbarItem,
   type NavbarProps,
@@ -10,6 +11,7 @@ import Highlight1 from "./components/Highlight1";
 import Highlight2 from "./components/Highlight2";
 
 import { getBrochureUrl } from "./helpers/utility";
+import { CHATBOT_URL } from "./constants";
 
 function App() {
   const navbarItems: NavbarItem[] = [
@@ -43,6 +45,9 @@ function App() {
   return (
     <div>
       <Navbar {...navbarProps} />
+
+      <ChatbotButton chatbotUrl={CHATBOT_URL} />
+
       <div className="container-fluid">
         <section id="home">
           <HomePage />
