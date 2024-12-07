@@ -4,7 +4,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### 0.0.2 (2024-10-02)
 
-
 ### Features
 
 * chatbot button and iframe support ([#72](https://github.com/Aniiish0/institute-app/issues/72)) ([58e817e](https://github.com/Aniiish0/institute-app/commit/58e817e7b1c1d89062f252efb5bf483306c2d3ad))
