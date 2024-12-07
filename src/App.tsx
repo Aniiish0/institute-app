@@ -13,6 +13,8 @@ import Highlight2 from "./components/Highlight2";
 import { getBrochureUrl } from "./helpers/utility";
 import { CHATBOT_URL } from "./constants";
 
+import "./index.css";
+
 function App() {
   const navbarItems: NavbarItem[] = [
     { label: "Home", redirectionUrl: "#home", sectionId: "home" },
